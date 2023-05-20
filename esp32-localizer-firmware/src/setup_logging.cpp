@@ -2,13 +2,15 @@
 
 void printPrefix(Print *_logOutput, int logLevel);
 
+#define LOGGING_PREFIX_SIZE 25
+
 void setupLogging(int logLevel, Print *output)
 {
     Log.begin(LOG_LEVEL_VERBOSE, &Serial);
     Log.setPrefix(printPrefix);
 }
 
-char timestampBuffer[25];
+char timestampBuffer[LOGGING_PREFIX_SIZE];
 
 void printPrefix(Print *_logOutput, int logLevel)
 {

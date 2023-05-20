@@ -1,13 +1,14 @@
 #include <Arduino.h>
 #include <ArduinoLog.h>
 
+#include "config.h"
 #include "setup_logging.h"
 
 void setup()
 {
-  Serial.begin(9600);
+  Serial.begin(SERIAL_BAUD_RATE);
   setupLogging(LOG_LEVEL_VERBOSE, &Serial);
-  delay(100); // wait for serial to stabilize
+  delay(INITIAL_DELAY); // wait for serial to stabilize
 }
 
 void loop()
