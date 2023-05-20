@@ -1,29 +1,17 @@
 #include <Arduino.h>
 #include <ArduinoLog.h>
 
-void printPrefix(Print *_logOutput, int logLevel);
+#include "setup_logging.h"
 
 void setup()
 {
-  // Setup logging
   Serial.begin(9600);
-  Log.begin(LOG_LEVEL_VERBOSE, &Serial);
-  Log.setPrefix(printPrefix);
-  delay(100);
-  Log.infoln("Starting setup");
-  Log.infoln("Finishing setup");
+  setupLogging(LOG_LEVEL_VERBOSE, &Serial);
+  delay(100); // wait for serial to stabilize
 }
 
 void loop()
 {
   Log.verboseln("Keep alive");
   delay(1000);
-}
-
-char timestampBuffer[25];
-
-void printPrefix(Print *_logOutput, int logLevel)
-{
-  snprintf(timestampBuffer, 25, "%10dms:", millis());
-  _logOutput->print(timestampBuffer);
 }
