@@ -3,6 +3,9 @@
 
 #include "config.h"
 #include "setup_logging.h"
+#include "bluetooth_scanner.h"
+
+RssiScanner scanner(SCAN_DURATION, SCAN_ACTIVE_MODE);
 
 void setup()
 {
@@ -13,6 +16,5 @@ void setup()
 
 void loop()
 {
-  Log.verboseln("Keep alive");
-  delay(1000);
+  scanner.scan();
 }
