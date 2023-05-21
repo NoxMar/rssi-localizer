@@ -1,7 +1,5 @@
-#include <Arduino.h>
-#include <ArduinoLog.h>
-
 #include "config.h"
+#include "util.h"
 #include "setup_logging.h"
 #include "bluetooth_scanner.h"
 
@@ -11,7 +9,8 @@ void setup()
 {
   Serial.begin(SERIAL_BAUD_RATE);
   setupLogging(LOG_LEVEL_VERBOSE, &Serial);
-  delay(INITIAL_DELAY); // wait for serial to stabilize
+  delay(INITIAL_DELAY); // wait for serial and WiFi to stabilize
+  setupWiFi();
 }
 
 void loop()
