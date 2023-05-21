@@ -8,7 +8,7 @@
 #define WIFI_INTIAL_RETRY_DELAY 1000
 
 /* ==== General Settings ==== */
-#define SERIAL_BAUD_RATE 9600
+#define SERIAL_BAUD_RATE 115200
 #define INITIAL_DELAY 4000
 #define INITIAL_DELAY 4000
 
