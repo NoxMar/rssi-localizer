@@ -2,13 +2,14 @@
 #define CONFIG_H
 
 /* === WiFi Settings === */
-#define WIFI_SSID "Pixel_8223"
-#define WIFI_PASSWORD "Tuxpega1357"
+#define WIFI_SSID "<YOUR_SSID>"
+#define WIFI_PASSWORD "<YOUR_WIFI_PASSWORD>"
 #define WIFI_INITIAL_RETRIES 4
 #define WIFI_INTIAL_RETRY_DELAY 1000
 
 /* ==== General Settings ==== */
 #define SERIAL_BAUD_RATE 9600
+#define INITIAL_DELAY 4000
 #define INITIAL_DELAY 4000
 
 /* ==== Scan Settings ==== */
