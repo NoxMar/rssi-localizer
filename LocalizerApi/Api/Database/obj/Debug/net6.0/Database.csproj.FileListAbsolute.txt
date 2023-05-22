@@ -1,0 +1,14 @@
+/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/bin/Debug/net6.0/Database.deps.json
+/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/bin/Debug/net6.0/Database.dll
+/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/bin/Debug/net6.0/Database.pdb
+/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/obj/Debug/net6.0/Database.csproj.AssemblyReference.cache
+/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/obj/Debug/net6.0/Database.GeneratedMSBuildEditorConfig.editorconfig
+/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/obj/Debug/net6.0/Database.AssemblyInfoInputs.cache
+/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/obj/Debug/net6.0/Database.AssemblyInfo.cs
+/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/obj/Debug/net6.0/Database.csproj.CoreCompileInputs.cache
+/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/obj/Debug/net6.0/Database.dll
+/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/obj/Debug/net6.0/refint/Database.dll
+/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/obj/Debug/net6.0/Database.pdb
+/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/obj/Debug/net6.0/ref/Database.dll
+/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/bin/Debug/net6.0/Database.runtimeconfig.json
+/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/obj/Debug/net6.0/Database.genruntimeconfig.cache
