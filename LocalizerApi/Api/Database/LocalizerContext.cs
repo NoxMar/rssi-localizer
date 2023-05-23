@@ -6,6 +6,7 @@ namespace Database;
 public class LocalizerContext : DbContext
 {
     public virtual DbSet<Sensor> Sensors { get; set; } = default!;
+    public virtual DbSet<Measurement> Measurements { get; set; } = default;
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
