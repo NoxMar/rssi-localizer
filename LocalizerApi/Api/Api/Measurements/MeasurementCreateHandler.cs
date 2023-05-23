@@ -16,13 +16,11 @@ public class MeasurementCreateHandler : IRequestHandler<MeasurementCreateRequest
 
     public async Task<bool> Handle(MeasurementCreateRequest request, CancellationToken cancellationToken)
     {
-        var sensor = await _context.Sensors.FirstOrDefaultAsync(s => s.Id == request.SensorId);
-        if (sensor is null) return false;
         var measurement = new Measurement
         {
             Rssi = request.Measurement.Rssi,
             CapturedAtUtc = DateTime.UtcNow,
-            CapturedBy = sensor,
+            SensorId = request.SensorId,
             DeviceUid = request.Measurement.DeviceUid
         };
         await _context.Measurements.AddAsync(measurement, cancellationToken);

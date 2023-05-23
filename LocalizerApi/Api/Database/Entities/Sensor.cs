@@ -11,6 +11,8 @@ public class Sensor
     public string Id { get; set; }
 
     public SensorType? DeviceType { get; set; } = SensorType.Esp32Type1;
+
+    public ICollection<Measurement> Measurements { get; set; } = default!;
 }
 
 internal class SensorConfigurator : IEntityTypeConfiguration<Sensor>
