@@ -10,7 +10,7 @@ private:
     bool activeMode;
 
 public:
-    void scan();
+    void scan(void (*onFound)(RssiScanner *context, BLEAdvertisedDevice *device));
     RssiScanner(int scanDurationSeconds, bool activeMode);
 };
 

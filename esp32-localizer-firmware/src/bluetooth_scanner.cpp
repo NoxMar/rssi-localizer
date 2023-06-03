@@ -7,7 +7,7 @@ RssiScanner::RssiScanner(int scanDurationSeconds = 120, bool activeMode = true)
     this->activeMode = activeMode;
 }
 
-void RssiScanner::scan()
+void RssiScanner::scan(void (*onFound)(RssiScanner *context, BLEAdvertisedDevice *result))
 {
     BLEDevice::init("");
     BLEScan *pBLEScan = BLEDevice::getScan(); // Begins new scan
@@ -26,5 +26,6 @@ void RssiScanner::scan()
         const char *address = device.getAddress().toString().c_str();
         int rssi = device.getRSSI();
         Log.infoln("Device found: address=\"%s\", RSSI=\"%d\"", address, rssi);
+        onFound(this, &device);
     }
 }
