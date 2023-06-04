@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Hw9su+/1L15szyugxzR6dX90V5Pno1j2u57mWJXWqd63MvH3rG5C6QdWwyu73e9TMyq4Idt9LpOx51OgKIF9GQ==",
+  "dgSpecHash": "rI5MbeNwxhhpyTCdtOVWYWKP3wuz98xF2/k67QQYpCelmoya3eksybLvCWP7JZEWS3xLDDGgU4rbXgvzaxZVEg==",
   "success": true,
-  "projectFilePath": "/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Api/Api.csproj",
+  "projectFilePath": "/home/noxmar/projects/embeded/rssi-localizer/LocalizerApi/Api/Api/Api.csproj",
   "expectedPackageFiles": [
     "/home/noxmar/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/home/noxmar/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

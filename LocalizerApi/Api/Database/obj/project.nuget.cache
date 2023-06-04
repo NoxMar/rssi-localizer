@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "AchYMWliW+8mTvRGM26JeYcGI2SwxxtsQNgxiiclDS8gsWG2qdv5W9cavNFZ3zq1J0WZwleKjMbYJ+YfiLAMow==",
+  "dgSpecHash": "pOo7Ogg54RhUo3j71Ig7ecAW7HvaHv5hbkakrlO11YupRKOkIeTOgD1W/43dcqBN/FciPEW+0HzpthmFkf+Ekw==",
   "success": true,
-  "projectFilePath": "/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/Database.csproj",
+  "projectFilePath": "/home/noxmar/projects/embeded/rssi-localizer/LocalizerApi/Api/Database/Database.csproj",
   "expectedPackageFiles": [
     "/home/noxmar/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/noxmar/.nuget/packages/microsoft.entityframeworkcore/7.0.5/microsoft.entityframeworkcore.7.0.5.nupkg.sha512",

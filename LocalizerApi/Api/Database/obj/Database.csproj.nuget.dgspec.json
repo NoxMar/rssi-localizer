@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/Database.csproj": {}
+    "/home/noxmar/projects/embeded/rssi-localizer/LocalizerApi/Api/Database/Database.csproj": {}
   },
   "projects": {
-    "/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/Database.csproj": {
+    "/home/noxmar/projects/embeded/rssi-localizer/LocalizerApi/Api/Database/Database.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/Database.csproj",
+        "projectUniqueName": "/home/noxmar/projects/embeded/rssi-localizer/LocalizerApi/Api/Database/Database.csproj",
         "projectName": "Database",
-        "projectPath": "/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/Database.csproj",
+        "projectPath": "/home/noxmar/projects/embeded/rssi-localizer/LocalizerApi/Api/Database/Database.csproj",
         "packagesPath": "/home/noxmar/.nuget/packages/",
-        "outputPath": "/home/noxmar/projects/embeded/localizer/LocalizerApi/Api/Database/obj/",
+        "outputPath": "/home/noxmar/projects/embeded/rssi-localizer/LocalizerApi/Api/Database/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/noxmar/.nuget/NuGet/NuGet.Config"
