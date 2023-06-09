@@ -287,6 +287,22 @@
           "build/net6.0/Microsoft.EntityFrameworkCore.Design.props": {}
         }
       },
+      "Microsoft.EntityFrameworkCore.InMemory/7.0.5": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "7.0.5"
+        },
+        "compile": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "related": ".xml"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/7.0.5": {
         "type": "package",
         "dependencies": {
@@ -1283,12 +1299,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "Mapster": "7.3.0",
-          "Mapster.DependencyInjection": "1.0.0",
-          "Mapster.EFCore": "5.1.0",
-          "MediatR": "12.0.1",
-          "Microsoft.EntityFrameworkCore.Abstractions": "7.0.5",
-          "Serilog": "2.12.0"
+          "Microsoft.EntityFrameworkCore": "7.0.5",
+          "Microsoft.EntityFrameworkCore.Abstractions": "7.0.5"
         },
         "compile": {
           "bin/placeholder/Database.Abstractions.dll": {}
@@ -1302,7 +1314,6 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Common": "1.0.0",
-          "Database.Abstractions": "1.0.0",
           "Domain.Common": "1.0.0",
           "Mapster": "7.3.0",
           "Mapster.DependencyInjection": "1.0.0",
@@ -1710,6 +1721,20 @@
         "lib/net6.0/Microsoft.EntityFrameworkCore.Design.xml",
         "microsoft.entityframeworkcore.design.7.0.5.nupkg.sha512",
         "microsoft.entityframeworkcore.design.nuspec"
+      ]
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/7.0.5": {
+      "sha512": "y3S/A/0uJX7KOhppC3xqyta6Z0PRz0qPLngH5GFu4GZ7/+Sw2u/amf7MavvR5GfZjGabGcohMpsRSahMmpF9gA==",
+      "type": "package",
+      "path": "microsoft.entityframeworkcore.inmemory/7.0.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.dll",
+        "lib/net6.0/Microsoft.EntityFrameworkCore.InMemory.xml",
+        "microsoft.entityframeworkcore.inmemory.7.0.5.nupkg.sha512",
+        "microsoft.entityframeworkcore.inmemory.nuspec"
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/7.0.5": {
@@ -3889,6 +3914,7 @@
       "MediatR >= 12.0.1",
       "Microsoft.EntityFrameworkCore >= 7.0.5",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.5",
+      "Microsoft.EntityFrameworkCore.InMemory >= 7.0.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.5",
       "Serilog >= 2.12.0"
     ]
@@ -3961,6 +3987,10 @@
           "Microsoft.EntityFrameworkCore.Design": {
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
+            "target": "Package",
+            "version": "[7.0.5, )"
+          },
+          "Microsoft.EntityFrameworkCore.InMemory": {
             "target": "Package",
             "version": "[7.0.5, )"
           },

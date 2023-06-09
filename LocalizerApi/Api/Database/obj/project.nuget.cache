@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "XfYnOyh0t1oFunQPPD2HGNPF53beEviHCVDs/GNhQohnaWQt2KvVcyEXy/vxEU6PtK9UxZyxeT5niUiQp51CuQ==",
+  "dgSpecHash": "j01sIFnKNJID2N/BPOSS0Rwr9zhnE9X9pQerl9bpob+9ADD0BxB1xHSUjUhyyH8Gj9MSwRW3z9jnVtZ8EAy2EQ==",
   "success": true,
   "projectFilePath": "/home/noxmar/projects/embeded/rssi-localizer/LocalizerApi/Api/Database/Database.csproj",
   "expectedPackageFiles": [
@@ -21,6 +21,7 @@
     "/home/noxmar/.nuget/packages/microsoft.entityframeworkcore.abstractions/7.0.5/microsoft.entityframeworkcore.abstractions.7.0.5.nupkg.sha512",
     "/home/noxmar/.nuget/packages/microsoft.entityframeworkcore.analyzers/7.0.5/microsoft.entityframeworkcore.analyzers.7.0.5.nupkg.sha512",
     "/home/noxmar/.nuget/packages/microsoft.entityframeworkcore.design/7.0.5/microsoft.entityframeworkcore.design.7.0.5.nupkg.sha512",
+    "/home/noxmar/.nuget/packages/microsoft.entityframeworkcore.inmemory/7.0.5/microsoft.entityframeworkcore.inmemory.7.0.5.nupkg.sha512",
     "/home/noxmar/.nuget/packages/microsoft.entityframeworkcore.relational/7.0.5/microsoft.entityframeworkcore.relational.7.0.5.nupkg.sha512",
     "/home/noxmar/.nuget/packages/microsoft.entityframeworkcore.sqlserver/7.0.5/microsoft.entityframeworkcore.sqlserver.7.0.5.nupkg.sha512",
     "/home/noxmar/.nuget/packages/microsoft.extensions.caching.abstractions/7.0.0/microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",

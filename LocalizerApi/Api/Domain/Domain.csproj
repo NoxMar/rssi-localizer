@@ -9,7 +9,6 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Common\Common.csproj" />
-      <ProjectReference Include="..\Database.Abstractions\Database.Abstractions.csproj" />
       <ProjectReference Include="..\Domain.Common\Domain.Common.csproj" />
     </ItemGroup>
 

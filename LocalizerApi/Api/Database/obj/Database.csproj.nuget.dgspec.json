@@ -86,29 +86,13 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Mapster": {
+            "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.3.0, )"
-            },
-            "Mapster.DependencyInjection": {
-              "target": "Package",
-              "version": "[1.0.0, )"
-            },
-            "Mapster.EFCore": {
-              "target": "Package",
-              "version": "[5.1.0, )"
-            },
-            "MediatR": {
-              "target": "Package",
-              "version": "[12.0.1, )"
+              "version": "[7.0.5, )"
             },
             "Microsoft.EntityFrameworkCore.Abstractions": {
               "target": "Package",
               "version": "[7.0.5, )"
-            },
-            "Serilog": {
-              "target": "Package",
-              "version": "[2.12.0, )"
             }
           },
           "imports": [
@@ -196,6 +180,10 @@
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
+              "target": "Package",
+              "version": "[7.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.InMemory": {
               "target": "Package",
               "version": "[7.0.5, )"
             },
@@ -330,9 +318,6 @@
             "projectReferences": {
               "/home/noxmar/projects/embeded/rssi-localizer/LocalizerApi/Api/Common/Common.csproj": {
                 "projectPath": "/home/noxmar/projects/embeded/rssi-localizer/LocalizerApi/Api/Common/Common.csproj"
-              },
-              "/home/noxmar/projects/embeded/rssi-localizer/LocalizerApi/Api/Database.Abstractions/Database.Abstractions.csproj": {
-                "projectPath": "/home/noxmar/projects/embeded/rssi-localizer/LocalizerApi/Api/Database.Abstractions/Database.Abstractions.csproj"
               },
               "/home/noxmar/projects/embeded/rssi-localizer/LocalizerApi/Api/Domain.Common/Domain.Common.csproj": {
                 "projectPath": "/home/noxmar/projects/embeded/rssi-localizer/LocalizerApi/Api/Domain.Common/Domain.Common.csproj"
