@@ -18,4 +18,9 @@ public class Sensor : BaseEntity
         
         return newSensor;
     }
+
+    public void Delete()
+    {
+        QueueDomainEvent(new SensorDeletedEvent(Id: Id, Uuid: Uuid));
+    }
 }

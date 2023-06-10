@@ -1,8 +1,11 @@
+using Application.Contracts;
 using Application.Contracts.Sensor.AddSensor;
 using Application.Contracts.Sensor.GetByUuid;
+using Application.Contracts.Sensor.RemoveByUuid;
 using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Exception = System.Exception;
 
 namespace WebApi.Sensor;
 
@@ -36,5 +39,19 @@ public class SensorsController : ControllerBase
             return NotFound();
         }
         return Ok(_mapper.Map<SensorDto>(sensor));
+    }
+
+    [HttpDelete("{uuid:required}")]
+    public async Task<IActionResult> DeleteByUuid(string uuid)
+    {
+        try
+        {
+            await _mediator.Send(new RemoveByUuidCommand(uuid));
+            return NoContent();
+        }
+        catch (EntityNotFoundException _)
+        {
+            return NotFound();
+        }
     }
 }
