@@ -1,4 +1,5 @@
 using Application.Contracts.Sensor.AddSensor;
+using Application.Sensor;
 using Application.Sensor.AddSensor;
 using Microsoft.Extensions.DependencyInjection;
 

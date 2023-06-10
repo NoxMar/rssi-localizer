@@ -1,11 +1,11 @@
 using Application.Contracts.Sensor;
-using Application.Contracts.Sensor.GetOne;
+using Application.Contracts.Sensor.GetByUuid;
 using Database;
 using MapsterMapper;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace Application.Sensor.AddSensor;
+namespace Application.Sensor.GetByUuid;
 
 public class GetOneSensorByUuidQueryHandler : IRequestHandler<GetOneSensorByUuidQuery, SensorAppDto?>
 {

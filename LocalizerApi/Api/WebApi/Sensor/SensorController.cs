@@ -1,5 +1,5 @@
 using Application.Contracts.Sensor.AddSensor;
-using Application.Contracts.Sensor.GetOne;
+using Application.Contracts.Sensor.GetByUuid;
 using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
