@@ -1,4 +1,5 @@
 using Application.Contracts.Sensor.AddSensor;
+using Application.Contracts.Sensor.GetOne;
 using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -24,5 +25,16 @@ public class SensorsController : ControllerBase
         var addSensorCommandDto = _mapper.Map<AddSensorCommandDto>(sensorForCreation);
         var addedSensor = await _mediator.Send( new AddSensorCommand(addSensorCommandDto));
         return _mapper.Map<SensorDto>(addedSensor);
+    }
+
+    [HttpGet("{uuid:required}")]
+    public async Task<IActionResult> GetOneByUuid(string uuid)
+    {
+        var sensor = await _mediator.Send(new GetOneSensorByUuidQuery(uuid));
+        if (sensor == null)
+        {
+            return NotFound();
+        }
+        return Ok(_mapper.Map<SensorDto>(sensor));
     }
 }
