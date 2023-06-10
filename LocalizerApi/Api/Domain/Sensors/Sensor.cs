@@ -23,4 +23,13 @@ public class Sensor : BaseEntity
     {
         QueueDomainEvent(new SensorDeletedEvent(Id: Id, Uuid: Uuid));
     }
+
+    public void ConsumeMeasurement(Measurement measurement)
+    {
+        QueueDomainEvent(new MeasurementTakenEvent(
+            SensorId: Id,
+            SensorUuid: Uuid,
+            DeviceUuid: measurement.DeviceUuid,
+            Rssi: measurement.Rssi));
+    }
 }

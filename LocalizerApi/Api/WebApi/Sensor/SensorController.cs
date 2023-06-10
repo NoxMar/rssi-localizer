@@ -1,5 +1,6 @@
 using Application.Contracts;
 using Application.Contracts.Sensor.AddSensor;
+using Application.Contracts.Sensor.ConsumeMeasurement;
 using Application.Contracts.Sensor.GetByUuid;
 using Application.Contracts.Sensor.RemoveByUuid;
 using MapsterMapper;
@@ -53,5 +54,24 @@ public class SensorsController : ControllerBase
         {
             return NotFound();
         }
+    }
+
+    [HttpPost("{uuid:required}/measurement")]
+    public async Task<IActionResult> ConsumeMeasurement([FromRoute] string uuid, 
+        [FromBody]MeasurementDto measurement)
+    {
+        var commandDto = new ConsumeMeasurementCommandDto(
+            SensorUuid: uuid,
+            DeviceUuid: measurement.DeviceUid,
+            Rssi: measurement.Rssi);
+        try
+        {
+            await _mediator.Send(new ConsumeMeasurementCommand(commandDto));
+        }
+        catch (EntityNotFoundException _)
+        {
+            return NotFound();
+        }
+        return NoContent();
     }
 }
