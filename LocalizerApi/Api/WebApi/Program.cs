@@ -1,6 +1,11 @@
+using Serilog;
 using WebApi;
 
 var builder = WebApplication.CreateBuilder(args);
+
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .CreateLogger();
 
 // Add services to the container.
 builder.Services.AddServices();

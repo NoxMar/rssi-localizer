@@ -5,6 +5,7 @@ using Domain;
 using Mapster;
 using MapsterMapper;
 using Microsoft.EntityFrameworkCore;
+using Serilog;
 
 namespace WebApi;
 
@@ -13,6 +14,12 @@ public static class WireServices
     public static void AddServices(this IServiceCollection services)
     {
         services.AddCommonServices();
+
+        services.AddLogging(loggingBuilder =>
+        {
+            loggingBuilder.ClearProviders();
+            loggingBuilder.AddSerilog();
+        });
         
         TypeAdapterConfig.GlobalSettings.Scan(typeof(Program).Assembly,
             typeof(Application.Sensor.SensorMappings).Assembly,
