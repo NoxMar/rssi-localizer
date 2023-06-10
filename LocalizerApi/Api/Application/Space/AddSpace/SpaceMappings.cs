@@ -3,7 +3,7 @@ using Application.Contracts.Space.AddSpace;
 using Domain.Spaces;
 using Mapster;
 
-namespace Application.Space;
+namespace Application.Space.AddSpace;
 
 public class SpaceMappings : IRegister
 {

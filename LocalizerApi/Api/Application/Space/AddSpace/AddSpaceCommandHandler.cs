@@ -5,7 +5,7 @@ using Domain.Spaces;
 using MapsterMapper;
 using MediatR;
 
-namespace Application.Space;
+namespace Application.Space.AddSpace;
 
 public class AddSpaceCommandHandler : IRequestHandler<AddSpaceCommand, SpaceAppDto?>
 {
