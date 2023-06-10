@@ -4,6 +4,7 @@ using MediatR;
 using Common.Services;
 using Domain.Common;
 using Domain.Sensors;
+using Domain.Spaces;
 
 namespace Database;
 
@@ -14,6 +15,7 @@ public class LocalizerContext : DbContext
     private readonly ICurrentUserService _currentUserService;
 
     public DbSet<Sensor> Sensors { get; set; }
+    public DbSet<Space> Spaces { get; set; }
 
     public LocalizerContext(DbContextOptions<LocalizerContext> options, IMediator mediator, IDateTimeProvider dateTimeProvider, ICurrentUserService currentUserService) : base(options)
     {
@@ -30,6 +32,7 @@ public class LocalizerContext : DbContext
         // Apply configurations
         modelBuilder.ApplyConfiguration(new BaseEntityConfig());
         modelBuilder.ApplyConfiguration(new SensorConfig());
+        modelBuilder.ApplyConfiguration(new SpaceConfig());
     }
 
     public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = new CancellationToken())
