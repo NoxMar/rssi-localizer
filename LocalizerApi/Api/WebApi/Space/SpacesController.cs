@@ -1,4 +1,5 @@
 using Application.Contracts.Space.AddSpace;
+using Application.Contracts.Space.GetOne;
 using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -24,5 +25,12 @@ public class SpacesController : ControllerBase
         var commandDto = _mapper.Map<AddSpaceCommandDto>(spaceForCreationDto);
         var space = await _mediator.Send(new AddSpaceCommand(commandDto));
         return space == null ? BadRequest() : Ok(_mapper.Map<SpaceDto>(space));
+    }
+
+    [HttpGet("{id:guid:required}")]
+    public async Task<IActionResult> GetOneSpace(Guid id)
+    {
+        var space = await _mediator.Send(new GetOneSpaceQuery(id));
+        return space == null ? NotFound() : Ok(_mapper.Map<SpaceDto>(space));
     }
 }
