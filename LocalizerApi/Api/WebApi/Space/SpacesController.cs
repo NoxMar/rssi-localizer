@@ -1,5 +1,6 @@
 using Application.Contracts.Space.AddSpace;
 using Application.Contracts.Space.GetOne;
+using Application.Contracts.Space.Remove;
 using MapsterMapper;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -33,4 +34,8 @@ public class SpacesController : ControllerBase
         var space = await _mediator.Send(new GetOneSpaceQuery(id));
         return space == null ? NotFound() : Ok(_mapper.Map<SpaceDto>(space));
     }
+
+    [HttpDelete("{id:guid:required}")]
+    public async Task<IActionResult> DeleteSpace([FromRoute] Guid id)
+        => await _mediator.Send(new RemoveSpaceCommand(id)) ? NoContent() : NotFound();
 }

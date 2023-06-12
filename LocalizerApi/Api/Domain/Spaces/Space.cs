@@ -20,4 +20,9 @@ public class Space : BaseEntity
         
         return newSpace;
     }
+
+    public void Delete()
+    {
+        QueueDomainEvent(new SpaceDeletedEvent(Id));
+    }
 }
