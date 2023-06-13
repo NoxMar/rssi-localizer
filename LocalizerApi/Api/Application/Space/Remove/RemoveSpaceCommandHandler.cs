@@ -1,6 +1,7 @@
 using Application.Contracts.Space.Remove;
 using Database;
 using MediatR;
+using Microsoft.EntityFrameworkCore;
 
 namespace Application.Space.Remove;
 
@@ -15,7 +16,9 @@ public class RemoveSpaceCommandHandler : IRequestHandler<RemoveSpaceCommand, boo
 
     public async Task<bool> Handle(RemoveSpaceCommand request, CancellationToken cancellationToken)
     {
-        var space = await _dbContext.Spaces.FindAsync(request.Id, cancellationToken);
+        var space = await _dbContext.Spaces
+            .FirstOrDefaultAsync(s => s.Id == request.Id,
+                cancellationToken: cancellationToken);
         if (space is null)
         {
             return false;
